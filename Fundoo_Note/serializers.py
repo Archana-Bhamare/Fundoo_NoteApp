@@ -16,7 +16,7 @@ class DisplayNoteSerializer(serializers.ModelSerializer):
 class RestoreNoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Notes
-        fields = ['bin']
+        fields = ['is_trash']
 
 class LabelSerializer(serializers.ModelSerializer):
     class Meta:

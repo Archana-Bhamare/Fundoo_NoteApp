@@ -7,8 +7,9 @@ class Notes(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=20)
     takeNote = models.TextField()
-    archive = models.BooleanField(default=False)
-    bin = models.BooleanField(default=False)
+    is_archive = models.BooleanField(default=False)
+    is_pin = models.BooleanField(default=False)
+    is_trash = models.BooleanField(default=False)
 
 
 class Label(models.Model):
